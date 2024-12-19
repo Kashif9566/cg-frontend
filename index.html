@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homologations Screen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./index.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100">
+    <div class="flex h-screen">
+      <!-- Sidebar -->
+      <aside
+        class="w-60 h-screen bg-[#1D2634] text-white hidden md:flex flex-col"
+        id="sidebar"
+      >
+        <div class="flex items-center justify-between py-5 px-4">
+          <div class="flex">
+            <img
+              src="./images//cgLogo.svg"
+              alt="cgLogo"
+              class="mr-2 nav-text"
+              id="logo"
+            />
+            <div>
+              <h1 class="text-[17px] font-bold nav-text">GuiU</h1>
+              <p class="text-[11px] font-medium nav-text">GUICHET UNIQUE</p>
+            </div>
+          </div>
+          <div>
+            <img
+              src="./images/close menu.svg"
+              id="closeButton"
+              class="cursor-pointer"
+            />
+            <img
+              src="./images/close menu (1).svg"
+              id="closeButtonCollapsed"
+              class="cursor-pointer hidden"
+            />
+          </div>
+        </div>
+        <hr class="bg-[#72869C] h-[1px] border-0 w-full" />
+        <nav class="space-y-4 pt-3 px-4">
+          <!-- Sidebar Links -->
+          <a href="#" class="flex items-center text-gray-300 hover:text-white">
+            <img src="./images/Frame.svg" alt="Dashboard" class="mr-2" />
+            <p class="text-xs font-normal nav-text">Tableau de Bord</p>
+          </a>
+          <a href="#" class="flex items-center text-gray-300 hover:text-white">
+            <img src="./images/Vector.svg" alt="Requests" class="mr-2" />
+            <p class="text-xs nav-text">Mes Demandes</p>
+          </a>
+          <hr class="bg-[#72869C] h-[1px] border-0 w-full" />
+          <div class="text-gray-400 mt-6 text-[10px] nav-text">
+            Telecommunications
+          </div>
+          <a href="#" class="flex text-white">
+            <img src="./images/Frame (2).svg" alt="Licences" class="mr-2" />
+            <p class="text-xs nav-text">Licences</p>
+          </a>
+          <a href="#" class="flex text-white">
+            <img src="./images/Frame (3).svg" alt="activities" class="mr-2" />
+            <p class="text-xs nav-text">Auxiliary activities</p>
+          </a>
+          <a href="#" class="flex text-white">
+            <img
+              src="./images/Frame (4).svg"
+              alt="Authorisation"
+              class="mr-2"
+            />
+            <p class="text-xs nav-text">Authorisation</p>
+          </a>
+          <a href="#" class="flex text-white">
+            <img src="./images/Frame (5).svg" alt="Declarations" class="mr-2" />
+            <p class="text-xs nav-text">Déclarations</p>
+          </a>
+          <a href="#" class="flex text-white">
+            <img src="./images/Frame (6).svg" alt="Approvals" class="mr-2" />
+            <p class="text-xs nav-text">Homologations</p>
+          </a>
+          <a href="#" class="flex text-white">
+            <img src="./images/Frame (7).svg" alt="codes" class="mr-2" />
+            <p class="text-xs nav-text">Numéros et codes</p>
+          </a>
+          <hr class="bg-[#72869C] h-[1px] border-0 w-full" />
+          <div class="text-gray-400 mt-6 text-[10px] nav-text">Poste</div>
+          <a href="#" class="flex text-white">
+            <img
+              src="./images/Frame (8).svg"
+              alt="Autorisations"
+              class="mr-2"
+            />
+            <p class="text-xs nav-text">Autorisations postales</p>
+          </a>
+          <hr class="bg-[#72869C] h-[1px] border-0 w-full" />
+          <div class="text-gray-400 mt-6 text-[10px] nav-text">
+            Autres options
+          </div>
+          <a href="#" class="flex text-white">
+            <img src="./images/help-circle.svg" alt="Tutoriel" class="mr-2" />
+            <p class="text-xs nav-text">Tutoriel</p>
+          </a>
+          <a href="#" class="flex text-white">
+            <img src="./images/Frame (9).svg" alt="Message" class="mr-2" />
+            <p class="text-xs nav-text">Message au GuiU</p>
+          </a>
+          <hr class="bg-[#72869C] h-[1px] border-0 w-full" />
+        </nav>
+      </aside>
+      <!-- Mobile sidebar off-canvas wrapper -->
+      <aside
+        class="fixed inset-0 z-50 bg-[#1D2634] text-white transform -translate-x-full transition-transform duration-300 md:hidden"
+        id="mobileSidebar"
+      >
+        <div class="flex items-center justify-between py-5 px-4">
+          <div class="flex">
+            <img
+              src="./images//cgLogo.svg"
+              alt="cgLogo"
+              class="mr-2 nav-text"
+              id="logo"
+            />
+            <div>
+              <h1 class="text-[17px] font-bold nav-text">GuiU</h1>
+              <p class="text-[11px] text-gray-300 nav-text">GUICHET UNIQUE</p>
+            </div>
+          </div>
+          <div>
+            <img
+              src="./images/close menu.svg"
+              id="mobileCloseButton"
+              class="cursor-pointer"
+            />
+          </div>
+        </div>
+        <hr class="bg-[#72869C] h-[1px] border-0 w-full" />
+        <nav class="space-y-4 pt-3 px-4">
+          <!-- Sidebar Links -->
+          <a href="#" class="flex items-center text-gray-300 hover:text-white">
+            <img src="./images/Frame.svg" alt="Dashboard" class="mr-2" />
+            <p class="text-[12px] font-normal nav-text">Tableau de Bord</p>
+          </a>
+          <a href="#" class="flex items-center text-gray-300 hover:text-white">
+            <img src="./images/Vector.svg" alt="Requests" class="mr-2" />
+            <p class="text-[12px] nav-text">Mes Demandes</p>
+          </a>
+          <hr class="bg-[#72869C] h-[1px] border-0 w-full" />
+          <div class="text-gray-400 mt-6 text-[10px] nav-text">
+            Telecommunications
+          </div>
+          <a href="#" class="flex text-white">
+            <img src="./images/Frame (2).svg" alt="Licences" class="mr-2" />
+            <p class="text-[12px] nav-text">Licences</p>
+          </a>
+          <a href="#" class="flex text-white">
+            <img src="./images/Frame (3).svg" alt="activities" class="mr-2" />
+            <p class="text-[12px] nav-text">Auxiliary activities</p>
+          </a>
+          <a href="#" class="flex text-white">
+            <img
+              src="./images/Frame (4).svg"
+              alt="Authorisation"
+              class="mr-2"
+            />
+            <p class="text-[12px] nav-text">Authorisation</p>
+          </a>
+          <a href="#" class="flex text-white">
+            <img src="./images/Frame (5).svg" alt="Declarations" class="mr-2" />
+            <p class="text-[12px] nav-text">Déclarations</p>
+          </a>
+          <a href="#" class="flex text-white">
+            <img src="./images/Frame (6).svg" alt="Approvals" class="mr-2" />
+            <p class="text-[12px] nav-text">Homologations</p>
+          </a>
+          <a href="#" class="flex text-white">
+            <img src="./images/Frame (7).svg" alt="codes" class="mr-2" />
+            <p class="text-[12px] nav-text">Numéros et codes</p>
+          </a>
+          <hr class="bg-[#72869C] h-[1px] border-0 w-full" />
+          <div class="text-gray-400 mt-6 text-[10px] nav-text">Poste</div>
+          <a href="#" class="flex text-white">
+            <img
+              src="./images/Frame (8).svg"
+              alt="Autorisations"
+              class="mr-2"
+            />
+            <p class="text-[12px] nav-text">Autorisations postales</p>
+          </a>
+          <hr class="bg-[#72869C] h-[1px] border-0 w-full" />
+          <div class="text-gray-400 mt-6 text-[10px] nav-text">
+            Autres options
+          </div>
+          <a href="#" class="flex text-white">
+            <img src="./images/help-circle.svg" alt="Tutoriel" class="mr-2" />
+            <p class="text-[12px] nav-text">Tutoriel</p>
+          </a>
+          <a href="#" class="flex text-white">
+            <img src="./images/Frame (9).svg" alt="Message" class="mr-2" />
+            <p class="text-[12px] nav-text">Message au GuiU</p>
+          </a>
+          <hr class="bg-[#72869C] h-[1px] border-0 w-full" />
+        </nav>
+      </aside>
+      <!-- Content -->
+      <div class="bg-[#1D2634] w-full"><div class="flex flex-col bg-[#F5F5F5] rounded-tl-2xl rounded-bl-2xl px-6 py-5">
+        <!-- Top Nav -->
+        <header class="flex justify-between items-center px-2 md:px-8">
+          <div
+            class="md:hidden flex items-center px-3 py-2 text-white cursor-pointer border border-2 rounded-full"
+            id="mobileMenuButton"
+          >
+            <img src="./images/black-hamburger.svg" alt="Menu" width="16" />
+            <p class="text-[#00244D] mx-2">Dashboard</p>
+          </div>
+          <div>
+            <h2 class="text-[18px] font-bold">Homologations</h2>
+          </div>
+
+          <!-- Desktop Actions Section -->
+          <div class="hidden md:flex gap-3 items-center">
+            <!-- Language Dropdown -->
+            <div class="relative">
+              <button
+                class="bg-white rounded-lg p-3 flex items-center hover:bg-gray-100"
+              >
+                <img src="./images/Icon@3x.svg" alt="Language Icon" />
+                <p class="text-[12px] ml-2">Français</p>
+                <img
+                  src="./images/chevron-down.svg"
+                  alt="Dropdown Icon"
+                  class="ml-1"
+                />
+              </button>
+            </div>
+
+            <!-- Icon/Button 1 -->
+            <button class="bg-white rounded-lg p-3 hover:bg-gray-100">
+              <img src="./images/Icon.svg" alt="General Icon" />
+            </button>
+
+            <!-- Notification Icon -->
+            <button class="bg-white rounded-lg p-3 hover:bg-gray-100">
+              <img src="./images/Notification.svg" alt="Notification" />
+            </button>
+
+            <!-- User Menu -->
+            <div>
+              <button
+                class="bg-white rounded-lg py-2 px-12 flex items-center hover:bg-gray-100"
+              >
+                <div class="flex-col">
+                  <p class="text-[12px]">Nicole S.</p>
+                  <p class="text-[#72869C] text-[9px]">Requérant</p>
+                </div>
+                <img
+                  src="./images/chevron-down.svg"
+                  alt="Dropdown Icon"
+                  class="ml-1"
+                />
+              </button>
+            </div>
+          </div>
+
+          <!-- Mobile Dropdown Menu -->
+        </header>
+
+        <!-- Main Form -->
+        <div class="flex items-center justify-start gap-x-16 bg-[#FAFAFA] rounded-tl-[20px] rounded-tr-[20px] p-4 sm:p-6 md:px-8 md:py-5">
+          <div>
+            <img src="./images/Vector.svg" alt="back">
+            <span>Quitter</span>
+          </div>
+          <!-- Stepper -->
+          <ul class="relative flex flex-col md:flex-row gap-2">
+            <!-- Item -->
+            <li class="md:shrink md:basis-0 flex-1 group flex gap-x-2 md:block">
+              <div class="min-w-7 min-h-7 flex flex-col items-center md:w-full md:inline-flex md:flex-wrap md:flex-row text-xs align-middle">
+                <span class="size-7 rounded-full bg-[#0468B4] flex justify-center items-center shrink-0 font-medium text-white">
+                  1
+                </span>
+                <div class="mt-2 w-px h-full md:mt-0 md:ms-2 md:w-full md:h-px md:flex-1 bg-[#C7CFD7] group-last:hidden"></div>
+              </div>
+              <div class="grow md:grow-0 md:mt-[10px]">
+                <span class="block text-[#0468B4] text-[8px] md:text-xs font-bold">
+                  Généralités
+                </span>
+              </div>
+            </li>
+            <!-- End Item -->
+          
+            <!-- Item -->
+            <li class="md:shrink md:basis-0 flex-1 group flex gap-x-2 md:block">
+              <div class="min-w-7 min-h-7 flex flex-col items-center md:w-full md:inline-flex md:flex-wrap md:flex-row text-xs align-middle">
+                <span class="size-7 rounded-full border-2 text-[#C7CFD7] flex justify-center items-center shrink-0 font-medium">
+                  2
+                </span>
+                <div class="mt-2 w-px h-full md:mt-0 md:ms-2 md:w-full md:h-px md:flex-1 bg-gray-200 group-last:hidden"></div>
+              </div>
+              <div class="md:grow-0 md:mt-[10px]">
+                <span class="block text-xs font-medium text-gray-800">
+                  Détails de la demande
+                </span>
+              </div>
+            </li>
+            <!-- End Item -->
+          
+            <!-- Item -->
+            <li class="md:shrink md:basis-0 flex-1 group flex gap-x-2 md:block">
+              <div class="min-w-7 min-h-7 flex flex-col items-center md:w-full md:inline-flex md:flex-wrap md:flex-row text-xs align-middle">
+                <span class="size-7 rounded-full border-2 text-[#C7CFD7] flex justify-center items-center shrink-0 font-medium">
+                  3
+                </span>
+                <div class="mt-2 w-px h-full md:mt-0 md:ms-2 md:w-full md:h-px md:flex-1 bg-gray-200 group-last:hidden"></div>
+              </div>
+              <div class="grow md:grow-0 md:mt-[10px]">
+                <span class="block text-xs font-medium text-gray-800">
+                  Documents à attacher
+                </span>
+              </div>
+            </li>
+            <!-- End Item -->
+            <!-- Item -->
+            <li class="md:shrink md:basis-0 flex-1 group flex gap-x-2 md:block">
+              <div class="min-w-7 min-h-7 flex flex-col items-center md:w-full md:inline-flex md:flex-wrap md:flex-row text-xs align-middle">
+                <span class="size-7 rounded-full border-2 text-[#C7CFD7] flex justify-center items-center shrink-0 font-medium">
+                  4
+                </span>
+                <div class="mt-2 w-px h-full md:mt-0 md:ms-2 md:w-full md:h-px md:flex-1 bg-gray-200 group-last:hidden"></div>
+              </div>
+              <div class="grow md:grow-0 md:mt-[6px]">
+                <span class="block text-xs font-medium text-gray-800">
+                  Résumé des informations
+                </span>
+              </div>
+            </li>
+            <!-- End Item -->
+            <!-- Item -->
+            <li class="md:shrink md:basis-0 flex-1 group flex gap-x-2 md:block">
+              <div class="min-w-7 min-h-7 flex flex-col items-center md:w-full md:inline-flex md:flex-wrap md:flex-row text-xs align-middle">
+                <span class="size-7 rounded-full border-2 text-[#C7CFD7] flex justify-center items-center shrink-0 font-medium text-gray-800">
+                  5
+                </span>
+                <div class="mt-2 w-px h-full md:mt-0 md:ms-2 md:w-full md:h-px md:flex-1 bg-[#C7CFD7] group-last:hidden"></div>
+              </div>
+              <div class="grow md:grow-0 md:mt-[6px]">
+                <span class="block text-xs font-medium text-gray-800">
+                  Paiement des frais
+                </span>
+              </div>
+            </li>
+            <!-- End Item -->
+          </ul>
+          <!-- End Stepper -->
+                </div>
+        <div class="flex flex-col shadow-sm px-2 md:px-0">
+          <div
+            class="bg-white p-4 sm:p-6 md:p-8 rounded-bl-[20px] rounded-br-[20px]"
+          >
+        
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+              <!-- Left Content Area -->
+              <div class="md:col-span-7">
+                <!-- Section Title -->
+                <h3
+                class="text-lg sm:text-lg xl:text-lg font-bold mb-2 text-[#00244D]"
+                >
+                  Généralités
+                </h3>
+                <p
+                  class="text-sm md:text-sm lg:text-sm xl:text-sm font-medium text-[#00244D] mb-4"
+                >
+                  Identification de la personne en charge du dossier
+                </p>
+
+                <!-- Contact Info Section -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1">
+                  <!-- Name Input -->
+                  <div class="relative mt-2">
+                    <input
+                      type="text"
+                      id="name"
+                      class="block px-3 pt-3 pb-3 w-full border border-[#E3E7EB] rounded-lg placeholder-[#00244D] text-xs"
+                      placeholder="Nicole Sarman"
+                    />
+                    <label
+                      for="name"
+                      class="absolute left-3 top-[-0.6rem] bg-white text-[#72869C] font-normal text-xs sm:text-base lg:text-[10px] xl-[10px] px-1"
+                    >
+                      Nom du contact*
+                    </label>
+                  </div>
+
+                  <!-- Phone Input -->
+                  <div class="relative mt-2">
+                    <input
+                      type="text"
+                      id="phone"
+                      class="block px-3 pt-3 pb-3 w-full border border-[#E3E7EB] rounded-lg placeholder-[#00244D] text-xs"
+                      placeholder="+243834373167"
+                    />
+                    <label
+                      for="phone"
+                      class="absolute left-3 top-[-0.6rem] bg-white text-[#72869C] font-normal text-xs sm:text-base lg:text-[10px] px-1"
+                    >
+                      Téléphone du contact*
+                    </label>
+                  </div>
+
+                  <!-- Email Input -->
+                  <div class="relative mt-2">
+                    <input
+                      type="text"
+                      id="email"
+                      class="block px-3 pt-3 pb-3 w-full border border-[#E3E7EB] rounded-lg placeholder-[#00244D] text-xs"
+                      placeholder="guichet.unique@arptc.gouv.cd"
+                    />
+                    <label
+                      for="email"
+                      class="absolute left-3 top-[-0.6rem] bg-white text-[#72869C] font-normal text-xs sm:text-base lg:text-[10px] px-1"
+                    >
+                      Email du contact*
+                    </label>
+                  </div>
+                </div>
+                <!-- Company Info Section -->
+                <div
+                  class="bg-[#FAFAFA] py-4 px-4 sm:py-5 sm:px-6 md:py-6 md:px-8 rounded-lg mt-5"
+                >
+                  <div class="flex items-center justify-between mb-3">
+                    <h3
+                      class="text-sm sm:text-base font-medium text-[#00244D]"
+                    >
+                      Information d'ordre général
+                    </h3>
+                    <p
+                      class="text-[#0468B4] font-medium text-[10px] cursor-pointer"
+                    >
+                      Modifier les détails
+                    </p>
+                  </div>
+                  <div
+                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-1"
+                  >
+                    <div>
+                      <label
+                        class="text-[#72869C] text-[10px] font-normal"
+                        >Société ou raison sociale</label
+                      >
+                      <p class="text-[#00244D] text-xs font-normal">Arptc</p>
+                    </div>
+                    <div>
+                      <label
+                        class="text-[#72869C] text-[10px] font-normal"
+                        >Type d'entreprise</label
+                      >
+                      <p class="text-[#00244D] text-xs font-normal">SA</p>
+                    </div>
+                    <div>
+                      <label
+                        class="text-[#72869C] text-[10px] font-normal"
+                        ># Registre de commerce</label
+                      >
+                      <p class="text-[#00244D] text-xs font-normal">3344544</p>
+                    </div>
+                    <div>
+                      <label
+                        class="text-[#72869C] text-[10px] font-normal"
+                        ># Id. nationale</label
+                      >
+                      <p class="text-[#00244D] text-xs font-normal">332224</p>
+                    </div>
+                    <div>
+                      <label
+                        class="text-[#72869C] text-[10px] font-normal"
+                        >Numéro Impôt</label
+                      >
+                      <p class="text-[#00244D] text-xs font-normal">33453</p>
+                    </div>
+                    <div>
+                      <label
+                        class="text-[#72869C] text-[10px] font-normal"
+                        >Téléphone de la société</label
+                      >
+                      <p class="text-[#00244D] text-xs font-normal">
+                        +243834373167
+                      </p>
+                    </div>
+                    <div>
+                      <label
+                        class="text-[#72869C] text-[10px] font-normal"
+                        >Fax</label
+                      >
+                      <p class="text-[#00244D] text-xs font-normal">
+                        +243834373167
+                      </p>
+                    </div>
+                    <div>
+                      <label
+                        class="text-[#72869C] text-[10px] font-normal"
+                        >Email de la société</label
+                      >
+                      <p class="text-[#00244D] text-xs font-normal">
+                        guichet.uni@arptc.gouv.cd
+                      </p>
+                    </div>
+                    <div>
+                      <label
+                        class="text-[#72869C] text-[10px] font-normal"
+                        >Site Internet</label
+                      >
+                      <p class="text-[#00244D] text-xs font-normal">
+                        https://arptc.gouv.cd
+                      </p>
+                    </div>
+                    <div>
+                      <label
+                        class="text-[#72869C] text-[10px] font-normal"
+                        >Représentant légal</label
+                      >
+                      <p class="text-[#00244D] text-xs font-normal">
+                        Christian Katende
+                      </p>
+                    </div>
+                    <div>
+                      <label
+                        class="text-[#72869C] text-[10px] font-normal"
+                        >Addresse de la société</label
+                      >
+                      <p class="text-[#00244D] text-xs font-normal">
+                        Kinshasa / Gombe
+                      </p>
+                    </div>
+                    <div>
+                      <label
+                        class="text-[#72869C] text-[10px] font-normal"
+                        >Province</label
+                      >
+                      <p class="text-[#00244D] text-xs font-normal">
+                        Kinshasa
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Buttons Section -->
+            <div
+              class="flex items-center justify-between mt-4 rounded-bl-[20px] rounded-br-[20px] bg-[#FFFFFF] px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4"
+            >
+              <!-- Retour Button -->
+              <button
+                class="px-8 py-3 text-xs font-medium border rounded-md text-gray-600 hover:bg-gray-100 transition duration-200 ease-in-out"
+              >
+                Retour
+              </button>
+
+              <div class="flex gap-2 sm:gap-3">
+                <!-- Sauvegarder Button -->
+                <button
+                  class="px-4 py-3 text-xs border-2 border-[#0468B4] text-[#0468B4] font-medium rounded-md"
+                >
+                  <img
+                    src="./images/savebtn.svg"
+                    alt="save"
+                    class="inline mr-1 sm:mr-2 transition duration-200 ease-in-out"
+                  />
+                  Sauvegarder
+                </button>
+
+                <!-- Suivant Button -->
+                <button
+                  class="px-8 py-3 text-xs bg-[#0468B4] text-white rounded-md"
+                >
+                  Suivant
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div></div>
+      
+    </div>
+  </body>
+  <script>
+    // JavaScript to toggle sidebar visibility and switch images
+    const closeButton = document.getElementById("closeButton");
+    const closeButtonCollapsed = document.getElementById(
+      "closeButtonCollapsed"
+    );
+    const sidebar = document.getElementById("sidebar");
+
+    closeButton.addEventListener("click", function () {
+      sidebar.classList.toggle("collapsed");
+      // Toggle visibility of images based on sidebar state
+      closeButton.classList.toggle("hidden");
+      closeButtonCollapsed.classList.toggle("hidden");
+    });
+
+    closeButtonCollapsed.addEventListener("click", function () {
+      sidebar.classList.toggle("collapsed");
+      // Toggle visibility of images based on sidebar state
+      closeButton.classList.toggle("hidden");
+      closeButtonCollapsed.classList.toggle("hidden");
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const mobileMenuButton = document.getElementById("mobileMenuButton");
+      const mobileSidebar = document.getElementById("mobileSidebar");
+      const mobileCloseButton = document.getElementById("mobileCloseButton");
+
+      mobileMenuButton.addEventListener("click", function () {
+        mobileSidebar.classList.add("show");
+      });
+
+      mobileCloseButton.addEventListener("click", function () {
+        mobileSidebar.classList.remove("show");
+      });
+    });
+  </script>
+</html>

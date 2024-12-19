@@ -1,0 +1,32 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+#sidebar {
+  transition: transform 0.5s ease, width 0.5s ease;
+}
+#sidebar.collapsed {
+  transform: translateX(0%);
+  width: 4rem;
+}
+#sidebar.collapsed .nav-text {
+  display: none;
+}
+
+/* Mobile Menu Off-Canvas Hidden by Default */
+#mobileSidebar {
+  transform: translateX(-100%);
+  width: 50%;
+  max-width: 300px; /* Optional: cap the maximum width if needed */
+}
+
+/* Visible on Active toggle */
+#mobileSidebar.show {
+  transform: translateX(0);
+}
+
+/* Media Query: Ensure only hidden off-canvas for mobile devices */
+@media (min-width: 768px) {
+  #mobileSidebar {
+    display: none;
+  }
+}
